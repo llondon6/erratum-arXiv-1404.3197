@@ -1,4 +1,4 @@
-\documentclass[twocolumn,prd,floatfix,preprintnumbers,a4paper,nofootinbib,superscriptaddress]{revtex4-1}
+\documentclass[notitlepage,prd,article,floatfix,preprintnumbers,a4paper,nofootinbib,superscriptaddress]{revtex4-1}
 
 \usepackage{epsfig}
 \usepackage{graphics}
@@ -45,28 +45,39 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{\textit{Techincal Notes:} A Multi-Mode Ringdown Model for the LIGO Analysis Library, Non-Spinning Binary Black Hole Systems}
+\title{Erratum: \textit{Modeling ringdown: Beyond the fundamental quasinormal modes}\\
+$[$Phys. Rev. D 90, 124032 (2014)$]$}
 
 \author{L. T. London}
 \affiliation{School of Physics and Astronomy, Cardiff University, The Parade, Cardiff, CF24 3AA, United Kingdom}
+\affiliation{Center for Relativistic Astrophysics, School of Physics,
+Georgia Institute of Technology, Atlanta, Georgia 30332, USA}
+ \author{James Healy}
+\affiliation{Center for Computational Relativity and Gravitation,
+School of Mathematical Sciences, Rochester Institute of Technology, Rochester, New York 14623, USA}
+ \author{Deirdre Shoemaker}
+ \affiliation{Center for Relativistic Astrophysics, School of Physics,
+ Georgia Institute of Technology, Atlanta, Georgia 30332, USA}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{abstract}
-	%
-	Here I summarize the structure of a multi-mode ringdown model for implementation in the LIGO Analysis Library. The model of discussion has been tuned to binary black hole systems with initial non-spinning progenitors. The current model, as well as its more general progeny may be used to directly compare the post-merger radiation of detected binary black hole systems to the predictions of classical black hole perturbation theory. For sufficiently, high SNR signals, this comparison enables testing of the No-Hair Theorem, which in turn would confer an new experimental test of how well Einstein's general relativity describes these systems.
-	%
-\end{abstract}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Preprint numbers %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\date{\today}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\let\newpage\relax\maketitle}
 
-\maketitle
-
-\paragraph{Introduction:---}
 %
-\par This is the erratum for the tables in \cite{London:2014cma}.
+\par While we currently present minor corrections and modifications to a subset of the tables, equations and figures in \cite{London:2014cma}, the work's core results and conclusions do not change: here, we modify the fitting formula, update plots containing overtones, and make a correction to
+%
+\par The algorithm used to generate Tables IV and V, as well as Equations (2-7) in \cite{London:2014cma} were found to be affected by an indexing error, through which the remnant black hole spin was erroneously equated with the remnant's mass.
+%
+In addition, the authors now choose to modify the fitting ansatz given by Equation (38) and (A2) such that overall factors of the symmetric mass ratio $\eta$ do not increase with overtone number.
+%
+This is motivated by the linearity of the $1^{\mathrm{st}}$ order \qnm{s} as $\eta \rightarrow 0$, and is consistent with Equation (35) of \cite{London:2014cma}.
+%
+Correcting the indexing error, and enforcing the more appropriate fitting ansatz for the overtones results in \eqns{eq:fit_fun_A220}{eq:fit_fun_A550}.
+%
+\input{fit_eqns}
+%
+\paragraph*{Related Figure Changes --} The changes above superficially affect Figures 7-9, 12 \& 14.
+%
+\paragraph*{Other Comments --} The equation just prior to Equation (32) is missing a factor of 2 in its exponent and thus should read $\cw^2_{lmn} = |\cw_{lmn}|^2 \, e^{-2\varphi_{lmn}}$. The first line of Equation (32) should contain $\cw^2_{lmn}$ not $\cw^2_{nlm}$. In \eqns{eq:fit_fun_A220}{eq:fit_fun_A550}, the authors choose to omit the $(l,m,n) \in \{ (5,4,0), \; (2,2,2) \}$ \qnm{s} due to data quality concerns.
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
 \bibliographystyle{ieeetr}
