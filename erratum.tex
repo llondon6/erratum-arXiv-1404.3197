@@ -1,0 +1,74 @@
+\documentclass[twocolumn,prd,floatfix,preprintnumbers,a4paper,nofootinbib,superscriptaddress]{revtex4-1}
+
+\usepackage{epsfig}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{amsfonts}
+\usepackage{bm}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{amssymb}
+\usepackage{psfrag}
+\usepackage{times}
+\usepackage[varg]{txfonts}
+\usepackage[colorlinks, pdfborder={0 0 0}]{hyperref}
+\usepackage{lineno}
+\usepackage{verbatim}
+\definecolor{LinkColor}{rgb}{0.75, 0, 0}
+\definecolor{CiteColor}{rgb}{0.75, 0, 0}
+\definecolor{UrlColor}{rgb}{0, 0, 0.75}
+\hypersetup{linkcolor=LinkColor}
+\hypersetup{citecolor=CiteColor}
+\hypersetup{urlcolor=UrlColor}
+\usepackage[utf8]{inputenc}
+\usepackage{ulem}
+\normalem
+\hoffset -0.17in
+\voffset 0.3in
+\textheight 10in
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Useful Definitions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{definitions}
+\def\cw{\tilde{\omega}}
+\def\CW{\tilde{\Omega}}
+\def\lalapprox{\texttt{MMRDNS}}
+
+% Numbers that may change from time to time
+\def\CwFitCalibrationRegion{\red{0.99} }
+\def\NumCalibrationPointsPlotted{\red{21} }
+\def\NumCalibrationPoints{\red{61} }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{\textit{Techincal Notes:} A Multi-Mode Ringdown Model for the LIGO Analysis Library, Non-Spinning Binary Black Hole Systems}
+
+\author{L. T. London}
+\affiliation{School of Physics and Astronomy, Cardiff University, The Parade, Cardiff, CF24 3AA, United Kingdom}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+	%
+	Here I summarize the structure of a multi-mode ringdown model for implementation in the LIGO Analysis Library. The model of discussion has been tuned to binary black hole systems with initial non-spinning progenitors. The current model, as well as its more general progeny may be used to directly compare the post-merger radiation of detected binary black hole systems to the predictions of classical black hole perturbation theory. For sufficiently, high SNR signals, this comparison enables testing of the No-Hair Theorem, which in turn would confer an new experimental test of how well Einstein's general relativity describes these systems.
+	%
+\end{abstract}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Preprint numbers %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\date{\today}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\maketitle
+
+\paragraph{Introduction:---}
+%
+\par This is the erratum for the tables in \cite{London:2014cma}.
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+\bibliographystyle{ieeetr}
+\bibliography{erratum.bib}
+\end{document}
